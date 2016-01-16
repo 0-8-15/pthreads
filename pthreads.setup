@@ -1,0 +1,10 @@
+;; -*-Scheme-*-
+
+(compile -s -O3 -d2 -J -emit-type-file "pthreads.types" "pthreads.scm" -L "-pthread")
+(compile -c -O3 "pthreads.scm" -unit pthreads -L "-pthread")
+(compile -s -O2 -d0 "pthreads.import.scm")
+
+(install-extension
+ 'pthreads
+ '("pthreads.so" "pthreads.import.so" "pthreads.types")
+ '((version "0.1")))

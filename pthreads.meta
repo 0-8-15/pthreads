@@ -1,0 +1,10 @@
+;; -*- mode: Scheme; -*-
+((category hell)
+ (license "BSD")
+ (author "Jörg F. Wittenberger")
+ (synopsis "Maintain and talk to a pthread pool.")
+ ;(doc-from-wiki)
+ (files "pthreads.scm" "pthreads.setup" "pthreads.meta"
+	)
+ )
+ 
