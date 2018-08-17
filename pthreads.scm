@@ -7,7 +7,6 @@
 ;; running systems.  I'll not try it any time soon.)
 ;; http://wiki.call-cc.org/eggref/4/concurrent-native-callbacks
 
-(use srfi-18)
 (declare
  ;; optional
  (disable-interrupts)			; checked
@@ -307,7 +306,10 @@ EOF
   )
 
 (import scheme
-	chicken foreign
+	(chicken base)
+	(chicken foreign)
+	(chicken type)
+	(chicken fixnum)
 	srfi-18)
 
 (: pool-send! (pointer pointer pointer -> undefined))
