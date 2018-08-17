@@ -1,3 +1,13 @@
+*~
+*.swp
+*.import.scm
+*.so
+*.types
+*.build.sh
+*.install.sh
+*.link
+salmonella.log
+
 # Object files
 *.o
 *.ko

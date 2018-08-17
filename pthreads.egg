@@ -8,5 +8,6 @@
   (extension
    pthreads
    (types-file)
-   (csc-options "-O3" "-d2" "-no-trace" "-no-lambda-info")))
+   (csc-options "-O3" "-d2" "-no-trace" "-no-lambda-info")
+   (link-options "-L" "-pthread")))
  )
