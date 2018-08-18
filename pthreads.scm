@@ -305,12 +305,17 @@ EOF
   external-wait				;; undocumented may be removed
   )
 
-(import scheme
-	(chicken base)
-	(chicken foreign)
-	(chicken type)
-	(chicken fixnum)
-	srfi-18)
+(import scheme)
+(cond-expand
+ (chicken-5
+  (import (chicken base)
+	  (chicken foreign)
+	  (chicken type)
+	  (chicken fixnum)
+	  srfi-18))
+ (else
+  (import chicken foreign)
+  (use srfi-18)))
 
 (: pool-send! (pointer pointer pointer -> undefined))
 ;; procedure data callback-gc-root
