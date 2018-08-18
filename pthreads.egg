@@ -4,6 +4,7 @@
  (author "Jörg F. Wittenberger")
  (synopsis "Maintain and talk to a pthread pool.")
  ;(doc-from-wiki)
+ (version "0.2")
  (components
   (extension
    pthreads
