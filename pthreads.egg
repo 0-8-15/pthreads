@@ -5,6 +5,7 @@
  (synopsis "Maintain and talk to a pthread pool.")
  ;(doc-from-wiki)
  (version "0.2")
+ (dependencies srfi-18)
  (components
   (extension
    pthreads
